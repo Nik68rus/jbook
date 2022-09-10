@@ -1,0 +1,29 @@
+.add-cell {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+  margin: 8px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.1s;
+
+  .force-visible & {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: calc(50% - 1px);
+    height: 2px;
+    background-color: gray;
+    z-index: -1;
+  }
+
+}
